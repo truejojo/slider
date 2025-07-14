@@ -36,11 +36,11 @@ const startSliderShowBtn = createBtn(
 );
 
 function updateView() {
-  const currentImage = current();
+  const currentSlide = current();
 
-  if (currentImage) {
-    headlineEl.innerText = currentImage.headline;
-    textEl.innerText = currentImage.text;
+  if (currentSlide) {
+    headlineEl.innerText = currentSlide.headline;
+    textEl.innerText = currentSlide.text;
   }
 }
 

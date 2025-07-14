@@ -22,15 +22,15 @@ const prevBtn = createBtn('<', 'btn-prev', handlePrevClick);
 const nextBtn = createBtn('>', 'btn-next', handleNextClick);
 
 function updateView() {
-  const currentImage = current();
+  const currentSlide = current();
 
-  if (currentImage) {
-    headlineEl.innerText = currentImage.headline;
+  if (currentSlide) {
+    headlineEl.innerText = currentSlide.headline;
   }
 }
 
 function initializeSlider() {
-  appendChildsToParent([headlineEl], slideEl);
+  appendChildsToParent(headlineEl, slideEl);
   appendChildsToParent(slideEl, sliderInnerEl);
   appendChildsToParent([prevBtn, nextBtn], sliderControlsEl);
 
