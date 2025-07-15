@@ -8,10 +8,25 @@ export const createElWithClassName = (tag, className) => {
   return el;
 };
 
+export const createElWithClassNameAndEventListener = (
+  tag,
+  className,
+  callback,
+  listener = 'click',
+) => {
+  const el = createElWithClassName(tag, className);
+  el.addEventListener(listener, callback);
+
+  return el;
+};
+
 export const createBtn = (content, className, callback) => {
-  const btn = createElWithClassName('button', className);
+  const btn = createElWithClassNameAndEventListener(
+    'button',
+    className,
+    callback,
+  );
   btn.innerText = content;
-  btn.addEventListener('click', callback);
 
   return btn;
 };

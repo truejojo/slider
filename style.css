@@ -2,6 +2,12 @@
   box-sizing: border-box;
 }
 
+h1,
+h2,
+p {
+  margin: 0;
+}
+
 .hide {
   display: none;
 }
@@ -18,22 +24,49 @@
   justify-content: center;
 }
 
+/* Oder lieber Event-Delegation? */
 /* image slider */
 .image-slider-inner {
   margin: 0;
   margin-bottom: 1rem;
-  aspect-ratio: 16/9;
   overflow: hidden;
+  position: relative;
+}
+
+.image-slider-figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  background-color: rgba(0, 0, 0, 0.65);
+  color: white;
+
+  pointer-events: none;
 }
 
 .image-slider-slide {
   width: 100%;
+  cursor: pointer;
 }
 
 .image-slider-controls {
   display: flex;
   justify-content: center;
   gap: 1rem;
+}
+
+.headline {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+.text {
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 /* tag slider */
@@ -49,7 +82,11 @@
 .tag-slider-slide {
   height: 100%;
   background-color: tomato;
-  padding: 2rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .tag-slider-controls {
@@ -82,4 +119,15 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
+}
+
+.hide {
+  display: none;
+}
+.position-absolute {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
