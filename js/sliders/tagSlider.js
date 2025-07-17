@@ -1,3 +1,5 @@
+'use strict';
+
 import { dias } from '../../data/dias.js';
 import {
   getDocumentByQuerySelector,

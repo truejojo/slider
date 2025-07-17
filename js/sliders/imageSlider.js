@@ -1,4 +1,4 @@
-// Callback-Muster
+'use strict';
 
 import { images } from '../../data/images.js';
 import {

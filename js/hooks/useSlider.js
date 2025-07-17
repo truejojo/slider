@@ -1,3 +1,5 @@
+'use strict';
+
 import { useLinkedList } from './useLinkedList.js';
 
 export const useSlider = (slides = [], onUpdate, intervalTime = 5000) => {

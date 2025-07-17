@@ -1,3 +1,5 @@
+'use strict';
+
 export const getDocumentByQuerySelector = (selector) =>
   document.querySelector(selector);
 

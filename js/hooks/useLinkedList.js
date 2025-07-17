@@ -1,3 +1,5 @@
+'use strict';
+
 export const useLinkedList = (items) => {
   if (!items || items.length === 0) {
     throw new Error('Items array must be provided and non-empty');
@@ -9,7 +11,7 @@ export const useLinkedList = (items) => {
     tail: null,
   };
 
-  const createNodesFromItems = () =>
+  const createNodesFromItems = (items) =>
     items.map((item) => ({
       data: item,
       next: null,
@@ -36,7 +38,7 @@ export const useLinkedList = (items) => {
   };
 
   const initialize = () => {
-    const nodes = createNodesFromItems();
+    const nodes = createNodesFromItems(items);
     connectedNodesCircular(nodes);
     state.current = state.head;
   };
